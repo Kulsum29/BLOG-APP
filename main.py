@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String
 # for login manager:
 from flask_login import LoginManager, UserMixin, login_user, logout_user, current_user, login_required
+import os
 
 app = Flask(__name__)
 login_manager = LoginManager()
@@ -167,4 +168,6 @@ def logout():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+    # app.run()
