@@ -1,0 +1,8 @@
+{
+  "parameters": {
+    "local_server":false,
+    "URI_local": "sqlite:///blog_app.db",
+    "title": "Food Journey",
+    "URI_Production": "postgresql://blog_app_wz4f_user:jnQkLbG26wo1XpG6Y7NDHdkcNX9WbuBh@dpg-d2639om3jp1c73cf0df0-a.oregon-postgres.render.com/blog_app_wz4f"
+  }
+}
